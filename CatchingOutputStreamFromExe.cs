@@ -14,8 +14,8 @@ namespace CatchOutputStream
             {
                 StartInfo = new ProcessStartInfo
                 {
-                    FileName = @"Path_to_exe",
-                    Arguments = @"Args",
+                    FileName = "\"" + "Path_to_exe" + "\"", //Added excape characters because cmd gets confused if there is a space in file path! 					
+                    Arguments = @"Args", 
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     CreateNoWindow = true
